@@ -9,7 +9,7 @@ defmodule FuelCalulationTest do
   @flight_path_2 [{:launched, 9.807}, {:land, 1.62}, {:launch, 1.62}, {:land, 9.807}]
                  |> Enum.reverse()
 
-  describe "Testing some cases for fuel calculate of space trip using mass and fuel_path" do
+  describe "calculate_fuel/1 When params are valid then return :ok with fuel else return :error with message" do
     setup :define_test_data_1
 
     test "Doing Fuel calculate with correct params mass & fuel_path", test_data do
